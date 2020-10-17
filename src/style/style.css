@@ -44,7 +44,7 @@ header{
     opacity: 1 !important;
     transition-duration: 3s;
 }
-.pop-icon:active{
+.pop-icon{
     box-shadow: 0 5px 4px 0 rgba(0,0,0,.26);
 }
 .pop-icon{
@@ -103,6 +103,9 @@ opacity: 1;
         max-width: 12rem !important;
         font-size: .7rem !important;
     }
+    .material-icons.send.new-convo{
+        vertical-align: middle !important;
+        font-size: 1rem !important;}
 }
 @media (min-width: 768px) and (max-width: 991.98px) { 
     .chat-p{
@@ -110,6 +113,10 @@ opacity: 1;
     }
     
  }
+.material-icons.menu,.material-icons.send.new-convo{
+    vertical-align: middle !important;
+    font-size: 1.4rem;
+}
 .navbar-toggler:focus{
     outline: none !important;
 }
@@ -193,7 +200,11 @@ opacity: 1;
     outline: none;
     box-shadow: none !important;
 }
-.material-icons.send{
+.material-icons.send.color{
     color: #7F8AC5 !important;
+    background-color: none !important;
+}
+.material-icons.close{
+    color: black !important;
     background-color: none !important;
 }

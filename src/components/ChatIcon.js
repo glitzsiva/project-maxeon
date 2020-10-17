@@ -10,7 +10,7 @@ export default class ChatIcon extends React.Component{
                     {
                         this.props.chatPop ?
                         <span data-aos="flip-right">
-                            <img src="assets/close.png"  className="img-fluid" alt="" />
+                            <i className="material-icons close">close</i>
                         </span>                      
                             :
                         <span data-aos="flip-right">

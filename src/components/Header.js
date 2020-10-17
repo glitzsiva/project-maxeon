@@ -12,14 +12,14 @@ export default class Header extends React.Component{
     }
     render(){
         return (   
-            <header className="sticky-top pt-4">
+            <header className="sticky-top pt-3">
                 <div className="container">
                     <nav className="navbar navbar-expand-lg navbar-light px-0">
                         <a className="navbar-brand" href="#">Maxeon</a>
                         <div className="order-lg-3">
                             <a href="#" className="text-dark rounded-pill px-3 px-sm-3 py-2 bg-white ml-lg-3 text-dectoration login"> Login</a>
                             <button onClick={this.toggleNavbar} className="navbar-toggler ml-3 nav-btn" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                                <span className="navbar-toggler-icon"></span>
+                            <i className="material-icons menu">menu</i>
                             </button>
                         </div> 
                         <Collapse isOpen={this.state.collapse} className="order-lg-2 order-3" navbar>                 
