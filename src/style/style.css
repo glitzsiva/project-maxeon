@@ -178,7 +178,9 @@ opacity: 1;
     min-height: 12rem !important;
     max-height: 12rem !important;
     overflow-y: auto;
-    
+    position: relative;
+    bottom: 0;
+    scroll-behavior: auto;
     
 }
 .small-text{

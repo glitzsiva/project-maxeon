@@ -11,7 +11,7 @@ export default class MessageBox extends React.Component{
         const title='Hello Ask Us Anything. Share Your Feedback'
         const replyTitle= 'The team typically replies in a few minutes'
         return(
-            <div  className="chat-box-fixed" data-aos="eg-left" >
+            <div  className={`chat-box-fixed ${this.props.class}`} data-aos="eg-left" >
                 <div className="cht " >
                     <div className=" bg-white pt-2 rounded">
                         <div className="notify mx-2 py-3 py-lg-3  px-4 rounded">
@@ -21,7 +21,7 @@ export default class MessageBox extends React.Component{
                             }
                         </div>
                         {
-                            this.props.start ? <Chat /> : <ChatInfo replyTitle={replyTitle} startChat={this.props.startChat}/>
+                            this.props.start ? <Chat data={this.props.data} userInput={this.props.userInput} sendText={this.props.sendText} /> : <ChatInfo replyTitle={replyTitle} startChat={this.props.startChat}/>
                         }
                     </div>
                 </div>           

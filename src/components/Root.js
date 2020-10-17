@@ -9,7 +9,9 @@ export default class Root extends React.Component{
     
     state={
         chatPop:false,
-        start:false
+        start:false,
+        userInput:[],
+        data:[]
     }
     componentDidMount(){
         AOS.init({
@@ -27,6 +29,22 @@ export default class Root extends React.Component{
             start:true
         })
     }
+    async getMsg() {       
+        const response = await fetch('https://api.adviceslip.com/advice')
+        const responseData = await response.json();
+        console.log()
+        const botMsg=responseData.slip;
+        this.setState({
+            data:this.state.data.concat(botMsg)
+        })
+    }
+    sendText=(userText)=>{
+        const userMsg={id:this.state.length, req:userText}
+         this.setState({
+             userInput:this.state.userInput.concat(userMsg)
+         })
+         this.getMsg();
+     }
 
 
     render(){
@@ -35,7 +53,7 @@ export default class Root extends React.Component{
                 <Header />
                 <Banner />
                 {
-                    this.state.chatPop && <MessageBox start={this.state.start}  startChat={this.startChat} />
+                    this.state.chatPop && <MessageBox data ={this.state.data} userInput={this.state.userInput} sendText={this.sendText} start={this.state.start}  startChat={this.startChat} />
                 }
                 <ChatIcon PopUp={this.PopUp} chatPop={this.state.chatPop} />
             </div>

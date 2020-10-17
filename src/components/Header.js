@@ -12,7 +12,7 @@ export default class Header extends React.Component{
     }
     render(){
         return (   
-            <header className="sticky-top pt-1">
+            <header className="sticky-top pt-4">
                 <div className="container">
                     <nav className="navbar navbar-expand-lg navbar-light px-0">
                         <a className="navbar-brand" href="#">Maxeon</a>
