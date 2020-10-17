@@ -20,7 +20,7 @@ export default class Chat extends React.Component {
                         <div>
                             <TextMsg profile='' chat="ml-auto" index={index} input={value.req}/>
                             {
-                                this.props.data[index] && <TextMsg index={index} profile="bot-img rounded-circle mr-2 align-self-center" input={this.props.data[index].advice} chat="m-0 bot-msg"/>
+                                this.props.data[index] && <TextMsg index={index} profile="bot-img rounded-circle mr-2 align-self-center" input={this.props.data[index].advice} chat=" bot-msg"/>
                             }
                            
                         </div>
